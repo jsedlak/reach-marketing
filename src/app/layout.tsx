@@ -1,16 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import Image from "next/image";
+import { FaGithub } from "react-icons/fa";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,9 +15,49 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className="antialiased">
+        <header className="py-5 px-10 bg-indigo-900">
+          <div className="flex justify-between items-center">
+            <div className="flex items-center gap-4">
+              <a href="/">
+                <Image
+                  alt="Reach CMS"
+                  width="64"
+                  height="64"
+                  src="/icon-white.svg"
+                  className="size-10"
+                />
+              </a>
+              <nav role="menu">
+                <ul className="flex items-center gap-4">
+                  <li>
+                    <a href="/">Platform</a>
+                  </li>
+                  <li>
+                    <a href="/">Solutions</a>
+                  </li>
+                  <li>
+                    <a href="/">Resources</a>
+                  </li>
+                  <li>
+                    <a href="/">Developers</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div className="flex items-center gap-4">
+              <a href="https://github.com/jsedlak/reach">
+                <FaGithub />
+              </a>
+              <a
+                href="/"
+                className="py-3 px-6 text rounded-lg border-white border hover:bg-white hover:text-indigo-900"
+              >
+                Request Demo
+              </a>
+            </div>
+          </div>
+        </header>
         {children}
       </body>
     </html>
