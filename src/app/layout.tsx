@@ -15,50 +15,67 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+          rel="stylesheet"
+          href="https://use.typekit.net/yld6skk.css"
+        ></link>
+      </head>
       <body className="antialiased">
         <header className="py-5 px-10 bg-indigo-900">
-          <div className="flex justify-between items-center">
-            <div className="flex items-center gap-4">
-              <a href="/">
-                <Image
-                  alt="Reach CMS"
-                  width="64"
-                  height="64"
-                  src="/icon-white.svg"
-                  className="size-10"
-                />
-              </a>
-              <nav role="menu">
-                <ul className="flex items-center gap-4">
-                  <li>
-                    <a href="/">Platform</a>
-                  </li>
-                  <li>
-                    <a href="/">Solutions</a>
-                  </li>
-                  <li>
-                    <a href="/">Resources</a>
-                  </li>
-                  <li>
-                    <a href="/">Developers</a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-            <div className="flex items-center gap-4">
-              <a href="https://github.com/jsedlak/reach">
-                <FaGithub />
-              </a>
-              <a
-                href="/"
-                className="py-3 px-6 text rounded-lg border-white border hover:bg-white hover:text-indigo-900"
-              >
-                Request Demo
-              </a>
+          <div className="container mx-auto">
+            <div className="flex justify-between items-center">
+              <div className="flex items-center gap-10">
+                <a href="/">
+                  <Image
+                    alt="Reach CMS"
+                    width="64"
+                    height="64"
+                    src="/icon-white.svg"
+                    className="size-10"
+                  />
+                </a>
+                <nav role="menu">
+                  <ul className="flex items-center gap-10">
+                    <li>
+                      <a href="/" className="text-lg">
+                        Platform
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/" className="text-lg">
+                        Solutions
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/" className="text-lg">
+                        Resources
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/" className="text-lg">
+                        Developers
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div className="flex items-center gap-4">
+                <a href="https://github.com/jsedlak/reach">
+                  <FaGithub className="size-6" />
+                </a>
+                <a
+                  href="/"
+                  className="py-3 px-6 text-lg rounded-lg border-white border hover:bg-white hover:text-indigo-900"
+                >
+                  Request Demo
+                </a>
+              </div>
             </div>
           </div>
         </header>
-        {children}
+        <div>{children}</div>
       </body>
     </html>
   );
