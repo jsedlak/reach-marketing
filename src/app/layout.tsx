@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -27,7 +28,7 @@ export default function RootLayout({
           <div className="container mx-auto">
             <div className="flex justify-between items-center">
               <div className="flex items-center gap-10">
-                <a href="/">
+                <Link href="/">
                   <Image
                     alt="Reach CMS"
                     width="64"
@@ -35,42 +36,42 @@ export default function RootLayout({
                     src="/icon-white.svg"
                     className="size-10"
                   />
-                </a>
+                </Link>
                 <nav role="menu">
                   <ul className="flex items-center gap-10">
                     <li>
-                      <a href="/" className="text-lg">
+                      <Link href="/" className="text-lg">
                         Platform
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="/" className="text-lg">
+                      <Link href="/" className="text-lg">
                         Solutions
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="/" className="text-lg">
+                      <Link href="/" className="text-lg">
                         Resources
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="/" className="text-lg">
+                      <Link href="/" className="text-lg">
                         Developers
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </nav>
               </div>
               <div className="flex items-center gap-4">
-                <a href="https://github.com/jsedlak/reach">
+                <a target="_blank" href="https://github.com/jsedlak/reach">
                   <FaGithub className="size-6" />
                 </a>
-                <a
+                <Link
                   href="/"
                   className="py-3 px-6 text-lg rounded-lg border-white border hover:bg-white hover:text-indigo-900"
                 >
                   Request Demo
-                </a>
+                </Link>
               </div>
             </div>
           </div>
