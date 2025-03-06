@@ -23,7 +23,7 @@ export default function RootLayout({
         ></link>
       </head>
       <body className="antialiased">
-        <header className="py-5 px-10 bg-indigo-900">
+        <header className="py-5 px-10 bg-indigo-900 text-white">
           <div className="container mx-auto">
             <div className="flex justify-between items-center">
               <div className="flex items-center gap-10">
